@@ -1,7 +1,7 @@
 {
   "name": "Fabware",
   "version": "0.0.1",
-  "description": "Frabware Angular.js test task.",
+  "description": "Fabware Angular.js test task.",
   "author": "Kate Gunko",
   "devDependencies": {
     "browser-sync": "2.6.5",
