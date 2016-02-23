@@ -1,0 +1,21 @@
+<md-dialog ng-cloak>
+    <form>
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>TRAILER</h2>
+                <span flex></span>
+                <md-button class="md-icon-button" ng-click="pc.close()">
+                    <i class="material-icons">close</i>
+                </md-button>
+            </div>
+        </md-toolbar>
+
+        <md-dialog-content>
+            <div class="md-dialog-content trailer-popup">
+                <h3>{{pc.title}}</h3>
+                <div ng-bind-html="pc.trailer"></div>
+            </div>
+        </md-dialog-content>
+
+    </form>
+</md-dialog>

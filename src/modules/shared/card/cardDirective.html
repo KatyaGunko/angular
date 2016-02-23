@@ -1,0 +1,42 @@
+<md-card ng-repeat="movie in movies" ng-hide="filterfavorites && !movie.favorite">
+
+    <!--MOVIE POSTER-->
+    <img ng-src="{{movie.poster}}" class="md-card-image" alt="Washed Out">
+
+    <!--TITLE-->
+    <md-card-title>
+        <md-card-title-text>
+                <span class="md-headline">
+                    {{movie.title| uppercase}} ({{movie.year}})
+                    <md-button class="md-icon-button" aria-label="Favorite">
+                        <i class="material-icons heart-icon" ng-class="{active: movie.favorite}" ng-click="movie.toggleFavorite();  $event.stopPropagation();">favorite_border</i>
+                    </md-button>
+                    {{movie.directors[0].name}}
+                    <i class="material-icons star-rating star-icon">star</i>
+                    {{ movie.rating }}
+                </span>
+
+        </md-card-title-text>
+    </md-card-title>
+
+    <md-card-actions layout="row" layout-align="start center" ng-hide="movie.trailers.length === 0">
+        <h3>Trailers</h3>
+        <md-button class="trailer-btn" ng-repeat="trailer in movie.trailers" ng-click="cc.showVideoPopup($event, trailer)">{{$index + 1}}</md-button>
+    </md-card-actions>
+
+    <md-card-actions layout="row" layout-align="start center" ng-hide="movie.genres.length === 0">
+        <h3>Genres</h3>
+        <span class="card-description" ng-repeat="genre in movie.genres">{{genre}}</span>
+    </md-card-actions>
+
+    <md-card-actions layout="row" layout-align="start center" ng-hide="movie.countries.length === 0">
+        <h3>Countries</h3>
+        <span class="card-description" aria-label="{{country}}" ng-repeat="country in movie.countries" ng-bind="country"></span>
+    </md-card-actions>
+
+
+    <md-card-content>
+        <h3 class="plot-header">Plot</h3>
+        <p ng-bind="movie.plot"></p>
+    </md-card-content>
+</md-card>

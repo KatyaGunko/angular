@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="">
+    <head>
+
+        <meta charset="utf-8">
+
+        <title>Top 20 films</title>
+
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="./bower_components/angular-chart.js/dist/angular-chart.css">
+        <link rel="stylesheet" type="text/css"  href="/bower_components/angular-material/angular-material.min.css">
+        <link rel="stylesheet" type="text/css"  href="/dist/css/main.min.css">
+
+
+    </head>
+
+    <body ng-app="fabwareApp">
+
+
+    <div ng-controller="mainCtrl" ng-cloak>
+
+        <section layout="row" flex>
+
+            <side-nav></side-nav>
+
+            <md-content flex layout-padding>
+                <md-button ng-click="toggleLeft()"
+                       class="md-primary main-menu-btn" hide-gt-md>
+                    <i class="material-icons">menu</i>
+                </md-button>
+
+                <ng-view></ng-view>
+            </md-content>
+
+        </section>
+
+    </div>
+
+<script src="./bower_components/angular/angular.min.js"></script>
+<script src="./bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+<script src="./bower_components/angular-route/angular-route.min.js"></script>
+<script src="./bower_components/angular-resource/angular-resource.min.js"></script>
+<script src="./bower_components/Chart.js/Chart.min.js"></script>
+<script src="./bower_components/angular-chart.js/angular-chart.js"></script>
+
+
+<script src="./bower_components/angular-animate/angular-animate.min.js"></script>
+<script src="./bower_components/angular-aria/angular-aria.min.js"></script>
+<script src="./bower_components/angular-material/angular-material.min.js"></script>
+
+
+<script src="./dist/js/main.min.js"></script>
+    </body>
+</html>
